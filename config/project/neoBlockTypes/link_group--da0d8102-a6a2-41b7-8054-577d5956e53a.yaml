@@ -48,4 +48,5 @@ minBlocks: 2
 minChildBlocks: 0
 minSiblingBlocks: 0
 name: 'Link Group'
+sortOrder: 3
 topLevel: false

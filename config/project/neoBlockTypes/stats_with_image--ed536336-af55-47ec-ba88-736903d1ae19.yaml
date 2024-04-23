@@ -73,4 +73,5 @@ minBlocks: 0
 minChildBlocks: 2
 minSiblingBlocks: 0
 name: 'Stats with Image'
+sortOrder: 12
 topLevel: true

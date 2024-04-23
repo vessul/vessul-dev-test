@@ -1,4 +1,4 @@
-dateModified: 1713892258
+dateModified: 1713905910
 email:
   fromEmail: dev@vessul.co
   fromName: Chaos
@@ -170,7 +170,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: Y6KF0L5NMOPONV3PFPJJJY7F
-    schemaVersion: 4.13.0
+    schemaVersion: 4.5.0
     settings:
       apiKey: ''
       cacheControlHeader: 'public, s-maxage=31536000, max-age=0'
@@ -293,7 +293,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: U9II5S4B4ST0H8ZC44BTQF7U
-    schemaVersion: 2.0.15
+    schemaVersion: 2.0.10
     settings:
       ajaxTimeout: 10
       captchas:
@@ -567,7 +567,7 @@ plugins:
                   - ''
       lowerQualityRetinaImageVariants: false
       sharpenScaledImagePercentage: 50
-      transformClass: nystudio107\imageoptimizesharp\imagetransforms\SharpImageTransform
+      transformClass: nystudio107\imageoptimize\imagetransforms\CraftImageTransform
   imager-x:
     edition: pro
     enabled: true
@@ -585,11 +585,15 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: 8CRSQUW080EQ22BDZYTR4T4B
-    schemaVersion: 4.0.0
+    schemaVersion: 3.6.2
   postmark:
     edition: standard
     enabled: true
     schemaVersion: 2.0.1
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
   retcon:
     edition: standard
     enabled: true
@@ -612,6 +616,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.1
+  typedlinkfield:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
   typogrify:
     edition: standard
     enabled: true
@@ -629,7 +637,7 @@ system:
   edition: solo
   live: true
   name: Chaos
-  schemaVersion: 4.5.3.0
+  schemaVersion: 4.4.0.4
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false

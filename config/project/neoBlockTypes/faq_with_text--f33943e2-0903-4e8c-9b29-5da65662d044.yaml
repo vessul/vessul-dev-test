@@ -49,4 +49,5 @@ minBlocks: 0
 minChildBlocks: 2
 minSiblingBlocks: 0
 name: 'FAQ with text'
+sortOrder: 18
 topLevel: true

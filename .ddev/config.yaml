@@ -1,4 +1,4 @@
-name: chaos
+name: dev-test
 type: craftcms
 docroot: web
 php_version: "8.1"

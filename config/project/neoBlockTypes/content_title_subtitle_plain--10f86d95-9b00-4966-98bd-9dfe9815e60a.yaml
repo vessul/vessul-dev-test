@@ -48,4 +48,5 @@ minBlocks: 0
 minChildBlocks: 0
 minSiblingBlocks: 0
 name: 'Title - Subtitle'
+sortOrder: 1
 topLevel: false

@@ -61,4 +61,5 @@ minBlocks: 0
 minChildBlocks: 2
 minSiblingBlocks: 0
 name: 'Feature 2x2 Grid with Icons'
+sortOrder: 11
 topLevel: true

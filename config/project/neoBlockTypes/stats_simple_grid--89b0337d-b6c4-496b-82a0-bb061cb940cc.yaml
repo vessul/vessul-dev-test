@@ -49,4 +49,5 @@ minBlocks: 0
 minChildBlocks: 3
 minSiblingBlocks: 0
 name: 'Stats Simple Grid'
+sortOrder: 13
 topLevel: true
