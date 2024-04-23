@@ -1,0 +1,8 @@
+{% if node.vimeoVideoCode|length %}
+     {% set vimeoVideoCode = node.vimeoVideoCode %}
+     <media-player src="vimeo/{{vimeoVideoCode}}">
+          <media-provider></media-provider>
+          {# <media-video-layout thumbnails="https://image.mux.com/VZtzUzGRv02OhRnZCxcNg49OilvolTqdnFLEqBsTwaxU/storyboard.vtt"></media-video-layout> #}
+          <media-video-layout></media-video-layout>
+     </media-player>
+{% endif %}

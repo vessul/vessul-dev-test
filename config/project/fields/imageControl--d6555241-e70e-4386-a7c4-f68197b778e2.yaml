@@ -1,0 +1,45 @@
+columnSuffix: qhqzgtly
+contentColumnType: string
+fieldGroup: 0270af02-7c52-4ff3-8408-86fe6bdbe1f1 # Blog
+handle: imageControl
+instructions: null
+name: 'Image Control'
+searchable: false
+settings:
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Regular
+        -
+          - value
+          - regular
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - Wide
+        -
+          - value
+          - wide
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Full Width'
+        -
+          - value
+          - fullWidth
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

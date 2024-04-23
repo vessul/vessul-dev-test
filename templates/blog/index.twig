@@ -1,0 +1,85 @@
+{% extends "_layouts/default.twig" %}
+
+{% block bodyTag %}
+{% endblock %}
+
+{% block _inline_css %}
+  <style>
+    {{source ("page_critical.min.css", ignore_missing = true)}}
+  </style>
+{% endblock %}
+
+{% block content %}
+  
+{% set blogEntries = craft.entries().section('blogPosts') %}
+
+     {% for entry in blogEntries.all() %}
+     <div class="bg-primary-light container mt-16">
+     <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="mx-auto max-w-2xl text-center">
+                    <h2 class="type_3xl text-primary-dark">  
+                         From the blog
+                    </h2>
+                    <p class="mt-2 type_lg text-secondary-dark">
+                         Learn how to grow your business with our expert advice.
+                    </p>
+          </div>
+          <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+               <article class="flex flex-col items-start justify-between">
+                    <a href="{{entry.url}}" class="relative w-full">
+                         {# <img src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80" alt="" class="aspect-[16/9] w-full rounded-2xl bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]"> #}
+                         {% for image in entry.postThumbnail.all() %}
+                         {% set photoDisplay = image.blog_optimization %}
+                         <picture>
+                              <source data-srcset="{{ photoDisplay.srcsetWidthWebP(384) }}" 
+                              sizes="100vw"
+                              type="image/webp" />
+                              <img data-src="{{ photoDisplay.placeholderImage(384) }}"
+                                   data-srcset="{{ photoDisplay.srcsetWidth(384) }}"
+                                   sizes="100vw" 
+                                   class="lazyload aspect-[16/9] w-full rounded-2xl bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2] rounded-md shadow-lg"
+                              {% for width,height in photoDisplay.variantHeights %}
+                                   width="{{width}}"  height="{{height}}"
+                              {% endfor %}  
+                              />
+                         </picture>
+                         {% endfor %}
+                         <div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
+                    </a>
+                    <div class="max-w-xl">
+                         <div class="mt-8 flex items-center gap-x-4 type_xs">
+                         <time datetime="2020-03-16" class="text-secondary-dark">
+                              {# https://www.php.net/manual/en/datetime.format.php #}
+                              {{ entry.blogPostDate|date("F jS") }}
+                         </time>
+                         {% if entry.postTag|length %}
+                              <a href="{{entry.url}}" class="relative z-10 rounded-full bg-secondary-light px-4 py-1.5 type_xs text-primary-dark hover:opacity-90">
+                                   {{ entry.postTag|capitalize }}
+                              </a>
+                         {% endif %}
+                         </div>
+                         <div class="group relative">
+                              <h3 class="mt-3 type_lg text-primary-dark group-hover:text-secondary-dark">
+                                   <a href="{{entry.url}}">
+                                        <span class="absolute inset-0"></span>
+                                        {{ entry.title }}
+                                   </a>
+                              </h3>
+                              <p class="mt-2 line-clamp-3 type_sm text-secondary-dark">
+                                   {% for node in entry.richText.all() %}
+                                        {{ node.renderHtml()|truncateOnWord(150, '...') }}
+                                   {% endfor %}
+                              </p>
+                         </div>
+                    </div>
+               </article>
+          </div>
+          </div>
+     </div>
+     {% endfor %}
+
+{% endblock %}
+
+{% block pageScript %}
+      {{ craft.vite.script('src/js/page/index.js', false) }}
+{% endblock %}

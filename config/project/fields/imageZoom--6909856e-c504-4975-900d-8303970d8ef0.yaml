@@ -1,0 +1,14 @@
+columnSuffix: sksqdxys
+contentColumnType: boolean
+fieldGroup: 0270af02-7c52-4ff3-8408-86fe6bdbe1f1 # Blog
+handle: imageZoom
+instructions: 'Turn this off to disable image zoom. '
+name: 'Image Zoom'
+searchable: false
+settings:
+  default: true
+  offLabel: null
+  onLabel: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

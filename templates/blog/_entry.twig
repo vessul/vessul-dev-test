@@ -1,0 +1,64 @@
+{% extends "_layouts/default.twig" %}
+
+{% block bodyTag %}
+{% endblock %}
+
+{% block _inline_css %}
+  <style>
+    {{source ("page_critical.min.css", ignore_missing = true)}}
+  </style>
+{% endblock %}
+
+{% block content %}
+  
+<div class="post"> 
+     <div class="container px-6 lg:px-8"> 
+          <a href="{{siteUrl}}blog" class="text-secondary-dark mb-4 type_xs"> 
+               <- Back to all posts
+          </a> 
+     </div>
+     {# Wrap in option settings  #}
+     <div class="w-full relative z-0"> 
+          <div class="relative"> 
+               {% for image in entry.postHeader.all() %}
+                    {% set photoDisplay = image.blog_optimization %}
+                    <picture>
+                         <source srcset="{{ photoDisplay.srcsetWidthWebP(1300) }}" 
+                         sizes="100vw"
+                         type="image/webp" />
+                         <img src="{{ photoDisplay.placeholderImage(1300) }}"
+                              data-srcset="{{ photoDisplay.srcsetWidth(1300) }}"
+                              sizes="100vw" 
+                              class="rounded-t-lg mx-auto"
+                         {% for width,height in photoDisplay.variantHeights %}
+                              width="{{width}}"  height="{{height}}"
+                         {% endfor %}  
+                         />
+                    </picture>
+               {% endfor %}
+               <div class="from-primary-light bg-gradient-to-t to-transparent absolute top-0 right-0 w-full h-full"> </div>
+          </div>
+     </div>
+     <div class="post_content_width mb-6 lg:mb-8 lg:-mt-12 relative z-10"> 
+
+          <p class="text-secondary-dark type_xs mb-4 lg:mb-6"> 
+               {# https://www.php.net/manual/en/datetime.format.php #}
+               {{ entry.blogPostDate|date("F jS") }}
+          </p>
+          <h1 class="text-primary-dark type_3xl"> 
+               {{ entry.title }}
+          </h1> 
+     </div>
+     {# End wrapped #}
+
+     {% for node in entry.richText.all() %}
+          {% include ['_vizy/' ~ node.type, '_vizy/default'] %}
+     {% endfor %}
+
+</div>
+
+{% endblock %}
+
+{% block pageScript %}
+      {{ craft.vite.script('src/js/page/index.js', false) }}
+{% endblock %}

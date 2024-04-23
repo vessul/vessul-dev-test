@@ -1,0 +1,6 @@
+{
+     "buttons": [ "undo", "redo",  "h2", "h3", "bold", "italic", "underline", "ordered-list", "unordered-list", "highlight", "link", "align-left", "align-center", "align-right", "clear-format"],
+     "formatting": ["paragraph", "h2", "h3"],
+     "toolbarFixed": true
+ }
+ 

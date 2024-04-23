@@ -1,0 +1,45 @@
+columnSuffix: hirqhmcy
+contentColumnType: string
+fieldGroup: 0270af02-7c52-4ff3-8408-86fe6bdbe1f1 # Blog
+handle: galleryControl
+instructions: null
+name: 'Gallery Control'
+searchable: false
+settings:
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - 'Two Column'
+        -
+          - value
+          - twoColumn
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - 'Three Column'
+        -
+          - value
+          - threeColumn
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Four Column'
+        -
+          - value
+          - fourColumn
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

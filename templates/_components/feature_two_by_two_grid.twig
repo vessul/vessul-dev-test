@@ -1,0 +1,40 @@
+<section class="dynamic_bg relative py-24 sm:py-32">
+     <div class="container"> 
+
+          <div class="mx-auto max-w-2xl lg:text-center animation_titleContainer">
+               <h2 class="type_base text-accent font-semibold animation_titleElement">
+                    {{ block.content_subtitle_plain }}
+               </h2>
+               <p class="mt-2 tracking-tight type_3xl text-primary-dark">
+                    {{ block.content_title_plain }}
+               </p>
+               <p class="mt-6 type_lg text-secondary-dark">
+                    {{ block.content_body_plain }}
+               </p>
+          </div>
+
+          <div class="mx-auto mt-16 max-w-2xl lg:mt-24 lg:max-w-4xl animation_repeatingBlocksContainer">
+               <dl class="grid_2x2">
+                    {% for block in block.children %}
+                         {% if block.content_title_plain|length %}
+                              <div class="ani_default_element relative pl-16 animation_repeatingBlocksElement">
+                                   <dt class="type_base text-primary-dark font-semibold">
+                                        <div class="box_icon">
+                                             {% for image in block.svg_inline.all() %}
+                                                  {{ svg(image)|attr({
+                                                            class: 'svg_boxed'
+                                                  }) }}
+                                             {% endfor %}
+                                        </div>
+                                        {{ block.content_title_plain }}
+                                   </dt>
+                                   <dd class="ani_default_element mt-2 type_base text-secondary-dark">
+                                        {{ block.content_body_plain }}
+                                   </dd>
+                              </div>
+                         {% endif %}
+                    {% endfor %}
+               </dl>
+          </div>
+     </div>
+</section>

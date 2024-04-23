@@ -1,0 +1,22 @@
+<div class="post_content_width">
+     {% for nodeContent in node.content %}
+          {% if node.attrs.level == '2' %}
+               {{ node.renderHtml({
+                    attrs: {
+                         level: '2',
+                         class: 'type_3xl text-primary-dark mt-12 mb-6 lg:mb-8 lg:mt-16',
+                    },
+               }) }}
+          {% else %}
+               {{ node.renderHtml({
+                    attrs: {
+                         level: '3',
+                         class: 'type_xl text-primary-dark mt-6 mb-4 lg:mt-8',
+                    },
+               }) }}
+          {% endif %}
+     {% endfor %}
+</div>
+     
+
+

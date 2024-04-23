@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: blogIndex
+name: Blog
+propagationMethod: all
+siteSettings:
+  abd4084c-0d61-4110-97b0-2f095d8c5445: # Chaos
+    enabledByDefault: true
+    hasUrls: true
+    template: blog/index.twig
+    uriFormat: blog
+type: single

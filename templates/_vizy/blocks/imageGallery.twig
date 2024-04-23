@@ -1,0 +1,28 @@
+<div class="my-6 lg:my-8 post_content_width--wide grid gap-x-6 gap-y-6 col-wrap
+     {% if node.galleryControl == 'twoColumn' %}grid-cols-2 lg:grid-cols-2{% endif %}        
+     {% if node.galleryControl == 'threeColumn' %}grid-cols-2 lg:grid-cols-3{% endif %}        
+     {% if node.galleryControl == 'fourColumn' %}grid-cols-2 lg:grid-cols-4{% endif %}        
+     "        
+>
+{% if node.imagesBlogGallery | length %}
+     {% for image in node.imagesBlogGallery.all() %}
+          {% set photoDisplay = image.blog_optimization %}
+          <picture>
+               <source data-srcset="{{ photoDisplay.srcsetWidthWebP(400) }}" 
+               data-sizes="100vw"
+               type="image/webp" />
+               <img data-src="{{ photoDisplay.placeholderImage(400) }}"
+                    data-srcset="{{ photoDisplay.srcsetWidth(400) }}"
+                    sizes="100vw" 
+                    class="lazyload rounded-lg shadow-lg mx-auto {% if node.imageZoom %}zoomable{% endif %}"
+               {% for width,height in photoDisplay.variantHeights %}
+                    width="{{width}}"  height="{{height}}"
+               {% endfor %}  
+               />
+          </picture>
+          {% endfor %}
+     {% endif %}
+</div>
+<span class="mx-auto text-xs mt-2 block text-center"> 
+     {{ node.content_title_plain }}
+</span>

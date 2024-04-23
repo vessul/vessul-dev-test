@@ -1,0 +1,33 @@
+<div class="overflow-hidden bg-white py-24 sm:py-32">
+     <div class="mx-auto max-w-2xl lg:max-w-7xl px-6 lg:px-8 animation_titleContainer">
+          <h2 class="mt-2 type_xl font-bold tracking-tight text-primary-dark sm:text-4xl animation_titleElement">
+               {{ block.content_title_plain }}
+          </h2>
+          <div class="mt-6 flex flex-col lg:flex-row gap-y-20 gap-x-8">
+               <div class="flex-auto w-full lg:max-w-2xl">
+                    <p class="type_lg leading-8 text-secondary-dark">
+                         {{ block.lead_paragraph }}
+                    </p>
+                    <p class="type_base mt-10 text-secondary-dark leading-7 lg:max-w-xl">
+                         {{ block.content_body_plain }}
+                    </p>
+               </div>
+               <div class="lg:flex-auto lg:justify-center flex">
+                    <dl class="lg:w-80 w-64 m-0 animation_repeatingBlocksContainer">
+                         {% for block in block.children %}
+                              {% if block.content_title_plain|length %}
+                                   <div class="{% if loop.index > 1 %} mt-8 {% endif %}  flex flex-col-reverse gap-y-4 animation_repeatingBlocksElement">
+                                        <p class="leading-7 text-secondary-dark">
+                                             {{ block.content_subtitle_plain }}
+                                        </p>
+                                        <p class="type_3xl font-semibold tracking-tight text-primary-dark">
+                                             {{ block.content_title_plain }}
+                                        </p>
+                                   </div>
+                              {% endif %}
+                         {% endfor %}
+                    </dl>
+               </div>
+          </div>
+     </div>
+</div>

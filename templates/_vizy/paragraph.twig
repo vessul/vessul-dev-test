@@ -1,0 +1,41 @@
+<p class="post_content_width
+     {% if attr(node.attrs) == ' textAlign="left"' %}
+          text-left
+     {% endif %}
+     {% if attr(node.attrs) == ' textAlign="right"' %}
+          text-right
+     {% endif %}
+     {% if attr(node.attrs) == ' textAlign="center"' %}
+          text-center
+     {% endif %}
+"> 
+     {% for nodeContent in node.content %}
+     {% for mark in nodeContent.marks %}
+               {% if mark.type == 'link' %}
+                    <a class="link text-accent underline" href="{{ mark.attrs.href }}" target="_blank">
+               {% elseif mark.type == 'bold' %}
+                    <strong>
+               {% elseif mark.type == 'italic' %}
+                    <em>
+               {% elseif mark.type == 'highlight' %}
+                    <mark class="bg-accent bg-opacity-20 p-1">
+               {% elseif mark.type == 'underline' %}
+                    <span class="underline">
+          {% endif %}
+     {% endfor %}
+          {{ nodeContent.text }}
+     {% for mark in nodeContent.marks %}
+               {% if mark.type == 'link' %}
+                    </a>
+               {% elseif mark.type == 'bold' %}
+                    </strong>
+               {% elseif mark.type == 'italic' %}
+                    </em>
+               {% elseif mark.type == 'highlight' %}
+                    </mark>
+               {% elseif mark.type == 'underline' %}
+                    </span>
+          {% endif %}
+     {% endfor %}
+     {% endfor %}
+</p>

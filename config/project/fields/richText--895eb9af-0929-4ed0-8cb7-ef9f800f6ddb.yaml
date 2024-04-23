@@ -1,0 +1,252 @@
+columnSuffix: dycvvrmh
+contentColumnType: text
+fieldGroup: 0270af02-7c52-4ff3-8408-86fe6bdbe1f1 # Blog
+handle: richText
+instructions: null
+name: 'Blog Editor'
+searchable: false
+settings:
+  availableTransforms: ''
+  availableVolumes: '*'
+  blockTypeBehaviour: click
+  columnType: text
+  configSelectionMode: choose
+  defaultTransform: ''
+  defaultUploadLocationSource: 'volume:47d85af7-a58a-401a-91ac-8a7e694423d2' # Uploads
+  editorMode: combined
+  fieldData:
+    -
+      __assoc__:
+        -
+          - id
+          - group-dleSr9cOBS
+        -
+          - name
+          - Default
+        -
+          - blockTypes
+          -
+            -
+              __assoc__:
+                0:
+                  - id
+                  - type-gMv0oiGEs9
+                1:
+                  - name
+                  - Image
+                2:
+                  - handle
+                  - image
+                3:
+                  - icon
+                  -
+                    __assoc__:
+                      -
+                        - label
+                        - Image
+                      -
+                        - value
+                        - image-solid
+                5:
+                  - enabled
+                  - true
+                6:
+                  - layoutUid
+                  - 2877359d-ad7e-4f74-a986-a5a6e340af5c
+                7:
+                  - layoutConfig
+                  -
+                    __assoc__:
+                      -
+                        - tabs
+                        -
+                          -
+                            __assoc__:
+                              0:
+                                - name
+                                - Content
+                              1:
+                                - uid
+                                - c852b2a3-11e6-4202-93c9-d6ab9e40e0e1
+                              4:
+                                - elements
+                                -
+                                  -
+                                    __assoc__:
+                                      0: [type, craft\fieldlayoutelements\CustomField]
+                                      1: [label, Image]
+                                      5: [required, false]
+                                      6: [width, 25]
+                                      7: [uid, 3c3aa924-c701-4e50-b277-f3e853a27fa7]
+                                      10: [fieldUid, 104df9c9-f17e-42d2-9ca9-77aa97418c17] # Image - 1 Max
+                                  -
+                                    __assoc__:
+                                      0: [type, craft\fieldlayoutelements\CustomField]
+                                      1: [label, Size]
+                                      2: [instructions, 'Default is the with of the existing content']
+                                      5: [required, false]
+                                      6: [width, 25]
+                                      7: [uid, 71d0dd4e-8d57-4421-bd61-04dcd02bdaed]
+                                      10: [fieldUid, d6555241-e70e-4386-a7c4-f68197b778e2] # Image Control
+                                  -
+                                    __assoc__:
+                                      0: [type, craft\fieldlayoutelements\CustomField]
+                                      5: [required, false]
+                                      6: [width, 25]
+                                      7: [uid, 4ed72400-6f7b-4de4-965c-709c98ae02ff]
+                                      10: [fieldUid, 6909856e-c504-4975-900d-8303970d8ef0] # Image Zoom
+                                  -
+                                    __assoc__:
+                                      0: [type, craft\fieldlayoutelements\CustomField]
+                                      1: [label, Caption]
+                                      2: [instructions, 'Optional caption under the image']
+                                      5: [required, false]
+                                      6: [width, 100]
+                                      7: [uid, 03dde062-8d69-4a54-9838-1828b4aae878]
+                                      10: [fieldUid, a5ecc83e-c8ee-4d47-ba2f-17bb67ee6fa9] # Plain Title
+            -
+              __assoc__:
+                0:
+                  - id
+                  - type-k9LsNkpcoQ
+                1:
+                  - name
+                  - 'Image Gallery'
+                2:
+                  - handle
+                  - imageGallery
+                3:
+                  - icon
+                  -
+                    __assoc__:
+                      -
+                        - label
+                        - Images
+                      -
+                        - value
+                        - images-solid
+                5:
+                  - enabled
+                  - true
+                6:
+                  - layoutUid
+                  - 47a6aef8-4125-4dd3-86f3-ec4b9ab3e4bb
+                7:
+                  - layoutConfig
+                  -
+                    __assoc__:
+                      -
+                        - tabs
+                        -
+                          -
+                            __assoc__:
+                              0:
+                                - name
+                                - Content
+                              1:
+                                - uid
+                                - 99dcb9d8-9fba-4788-8166-ac8ff8f85cb5
+                              4:
+                                - elements
+                                -
+                                  -
+                                    __assoc__:
+                                      0: [type, craft\fieldlayoutelements\CustomField]
+                                      1: [label, Images]
+                                      5: [required, false]
+                                      6: [width, 100]
+                                      7: [uid, c51f97f6-e6f5-4c99-98ae-a0a3e88e9dcb]
+                                      10: [fieldUid, ef0ccd1f-f079-4676-8880-d641f90f0031] # Images Blog Gallery
+                                  -
+                                    __assoc__:
+                                      0: [type, craft\fieldlayoutelements\CustomField]
+                                      5: [required, false]
+                                      6: [width, 50]
+                                      7: [uid, cb7277e9-ea03-433e-b4b5-7b59c9543e51]
+                                      10: [fieldUid, 45ea30ac-387f-46e5-9b34-b2d02f03f011] # Gallery Control
+                                  -
+                                    __assoc__:
+                                      0: [type, craft\fieldlayoutelements\CustomField]
+                                      5: [required, false]
+                                      6: [width, 50]
+                                      7: [uid, d38aefba-a443-4666-8354-2ce38c6bc28e]
+                                      10: [fieldUid, 6909856e-c504-4975-900d-8303970d8ef0] # Image Zoom
+                                  -
+                                    __assoc__:
+                                      0: [type, craft\fieldlayoutelements\CustomField]
+                                      1: [label, 'Gallery Note']
+                                      5: [required, false]
+                                      6: [width, 100]
+                                      7: [uid, 176b5aa3-3e69-4fea-a1f6-ea229f791221]
+                                      10: [fieldUid, a5ecc83e-c8ee-4d47-ba2f-17bb67ee6fa9] # Plain Title
+            -
+              __assoc__:
+                0:
+                  - id
+                  - type-UnCAV7qQ0c
+                1:
+                  - name
+                  - Video
+                2:
+                  - handle
+                  - video
+                3:
+                  - icon
+                  -
+                    __assoc__:
+                      -
+                        - label
+                        - Video
+                      -
+                        - value
+                        - video-solid
+                5:
+                  - enabled
+                  - true
+                6:
+                  - layoutUid
+                  - c9740a7d-38eb-4379-bf38-306abb12cca6
+                7:
+                  - layoutConfig
+                  -
+                    __assoc__:
+                      -
+                        - tabs
+                        -
+                          -
+                            __assoc__:
+                              0:
+                                - name
+                                - Content
+                              1:
+                                - uid
+                                - 8e984bec-b35e-4b11-ac1d-dee70581d729
+                              4:
+                                - elements
+                                -
+                                  -
+                                    __assoc__:
+                                      0: [type, craft\fieldlayoutelements\CustomField]
+                                      5: [required, false]
+                                      6: [width, 100]
+                                      7: [uid, 24c5ad1b-43a1-4dd2-9bf1-9970f4d6b2ae]
+                                      10: [fieldUid, a5ecc83e-c8ee-4d47-ba2f-17bb67ee6fa9] # Plain Title
+                                  -
+                                    __assoc__:
+                                      0: [type, craft\fieldlayoutelements\CustomField]
+                                      5: [required, false]
+                                      6: [width, 100]
+                                      7: [uid, deaa1ab8-9385-4680-8aa5-a4f568395aaa]
+                                      10: [fieldUid, f5939e68-fb8c-45ac-a02c-ee707315e133] # Vimeo Video Code
+  initialRows: 7
+  manualConfig: "{\r\n    \"buttons\": [\"html\", \"formatting\", \"h1\", \"h2\", \"h3\", \"h4\", \"h5\", \"h6\", \"bold\", \"italic\", \"underline\", \"strikethrough\", \"subscript\", \"superscript\", \"ordered-list\", \"unordered-list\", \"code-block\", \"hr\", \"highlight\", \"align-left\", \"align-right\", \"align-center\", \"align-justify\", \"clear-format\", \"line-break\", \"link\", \"image\", \"table\", \"media-embed\", \"iframe\", \"undo\", \"redo\"],\r\n    \"formatting\": [\"paragraph\", \"code-block\", \"blockquote\", \"h1\", \"h2\", \"h3\", \"h4\", \"h5\", \"h6\"],\r\n    \"table\": [\"insert-table\", \"delete-table\", \"add-col-before\", \"add-col-after\", \"delete-col\", \"add-row-before\", \"add-row-after\", \"delete-row\", \"merge-cells\", \"split-cells\", \"toggle-header-column\", \"toggle-header-row\", \"toggle-header-cell\"],\r\n    \"toolbarFixed\": true\r\n}\r\n"
+  maxBlocks: null
+  minBlocks: null
+  pasteAsPlainText: false
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  trimEmptyParagraphs: true
+  vizyConfig: Blog.json
+translationKeyFormat: null
+translationMethod: none
+type: verbb\vizy\fields\VizyField

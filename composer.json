@@ -1,0 +1,97 @@
+{
+  "name": "vessul/chaos",
+  "description": "Chaos Development System",
+  "version": "3.0.0",
+  "keywords": [
+    "craft",
+    "cms",
+    "craftcms",
+    "project"
+  ],
+  "type": "project",
+  "support": {
+    "email": "dev@vessul.co"
+  },
+  "require": {
+    "aws/aws-sdk-php": "^3",
+    "craftcms/aws-s3": "2.2.1",
+    "craftcms/ckeditor": "3.8.3",
+    "craftcms/cms": "4.8.9",
+    "craftcms/feed-me": "5.4.0",
+    "craftcms/postmark": "3.1.0",
+    "mmikkel/cp-field-inspect": "^1.4",
+    "mmikkel/retcon": "2.7.5",
+    "nystudio107/craft-cookies": "^4.0",
+    "nystudio107/craft-eagerbeaver": "^4.0",
+    "nystudio107/craft-emptycoalesce": "^4.0",
+    "nystudio107/craft-fastcgicachebust": "^4.0-beta.1",
+    "nystudio107/craft-imageoptimize": "4.0.7",
+    "nystudio107/craft-minify": "^4.0-beta.2",
+    "nystudio107/craft-retour": "4.1.16",
+    "nystudio107/craft-scripts": "^1.2.4",
+    "nystudio107/craft-seomatic": "4.0.48",
+    "nystudio107/craft-typogrify": "4.0.3",
+    "nystudio107/craft-vite": "4.0.9",
+    "ostark/craft-async-queue": "3.2.1",
+    "pennebaker/craft-architect": "4.0.1",
+    "putyourlightson/craft-blitz": "4.16.3",
+    "putyourlightson/craft-sprig": "2.8.1",
+    "spicyweb/craft-neo": "4.1.2",
+    "topshelfcraft/environment-label": "^4.0.1",
+    "verbb/field-manager": "3.0.8",
+    "verbb/formie": "2.1.12",
+    "verbb/knock-knock": "2.0.11",
+    "verbb/vizy": "2.1.18",
+    "vlucas/phpdotenv": "^5.4.0",
+    "yiisoft/yii2-redis": "^2.0.3"
+  },
+  "require-dev": {
+    "yiisoft/yii2-shell": "^2.0.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "modules\\": "modules/"
+    }
+  },
+  "config": {
+    "sort-packages": true,
+    "optimize-autoloader": true,
+    "platform": {
+      "php": "8.1"
+    },
+    "allow-plugins": {
+      "yiisoft/yii2-composer": true,
+      "treeware/plant": false,
+      "craftcms/plugin-installer": true
+    }
+  },
+  "scripts": {
+    "craft-update": [
+      "@pre-craft-update",
+      "@post-craft-update"
+    ],
+    "pre-craft-update": [],
+    "post-craft-update": [
+      "@php craft install/check && php craft up --interactive=0 || exit 0",
+      "@php craft install/check && php craft clear-caches/all --interactive=0 || exit 0",
+      "@php craft install/check && php craft invalidate-tags/all --interactive=0 || return 0"
+    ],
+    "post-root-package-install": [
+      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+    ],
+    "post-create-project-cmd": [
+      "@php craft setup/welcome"
+    ],
+    "pre-update-cmd": "@pre-craft-update",
+    "pre-install-cmd": "@pre-craft-update",
+    "post-update-cmd": "@post-craft-update",
+    "post-install-cmd": "@post-craft-update"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://composer.craftcms.com",
+      "canonical": false
+    }
+  ]
+}

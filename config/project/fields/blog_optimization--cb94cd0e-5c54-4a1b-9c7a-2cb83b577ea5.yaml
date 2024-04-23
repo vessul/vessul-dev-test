@@ -1,0 +1,145 @@
+columnSuffix: noozfztf
+contentColumnType: text
+fieldGroup: e990e24f-89cb-4e2d-af75-2025e3fd7c64 # Utility
+handle: blog_optimization
+instructions: null
+name: 'Blog Optimization'
+searchable: false
+settings:
+  displayDominantColorPalette: false
+  displayLazyLoadPlaceholderImages: false
+  displayOptimizedImageVariants: true
+  fieldVolumeSettings:
+    __assoc__:
+      -
+        - uploads
+        - '*'
+  variants:
+    -
+      __assoc__:
+        -
+          - width
+          - '1200'
+        -
+          - useAspectRatio
+          - ''
+        -
+          - aspectRatioX
+          - '16'
+        -
+          - aspectRatioY
+          - '9'
+        -
+          - retinaSizes
+          -
+            - '1'
+            - '2'
+        -
+          - quality
+          - '82'
+        -
+          - format
+          - jpg
+    -
+      __assoc__:
+        -
+          - width
+          - '450'
+        -
+          - useAspectRatio
+          - ''
+        -
+          - aspectRatioX
+          - '16'
+        -
+          - aspectRatioY
+          - '9'
+        -
+          - retinaSizes
+          -
+            - '1'
+            - '2'
+        -
+          - quality
+          - '82'
+        -
+          - format
+          - ''
+    -
+      __assoc__:
+        -
+          - width
+          - '400'
+        -
+          - useAspectRatio
+          - '1'
+        -
+          - aspectRatioX
+          - '4'
+        -
+          - aspectRatioY
+          - '3'
+        -
+          - retinaSizes
+          -
+            - '1'
+            - '2'
+        -
+          - quality
+          - '82'
+        -
+          - format
+          - jpg
+    -
+      __assoc__:
+        -
+          - width
+          - '1300'
+        -
+          - useAspectRatio
+          - '1'
+        -
+          - aspectRatioX
+          - '16'
+        -
+          - aspectRatioY
+          - '4'
+        -
+          - retinaSizes
+          -
+            - '1'
+            - '2'
+        -
+          - quality
+          - '82'
+        -
+          - format
+          - jpg
+    -
+      __assoc__:
+        -
+          - width
+          - '384'
+        -
+          - useAspectRatio
+          - '1'
+        -
+          - aspectRatioX
+          - '8'
+        -
+          - aspectRatioY
+          - '5'
+        -
+          - retinaSizes
+          -
+            - '1'
+            - '2'
+        -
+          - quality
+          - '82'
+        -
+          - format
+          - jpg
+translationKeyFormat: null
+translationMethod: none
+type: nystudio107\imageoptimize\fields\OptimizedImages

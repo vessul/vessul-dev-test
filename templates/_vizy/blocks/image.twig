@@ -1,0 +1,27 @@
+<div class="my-6 lg:my-8 
+     {% if node.imageControl == 'regular' %}post_content_width{% endif %} 
+     {% if node.imageControl == 'wide' %}post_content_width--wide{% endif %} 
+     {% if node.imageControl == 'fullWidth' %}w-full{% endif %}"          
+>
+{% if node.image_max_one | length %}
+     {% for image in node.image_max_one.all() %}
+          {% set photoDisplay = image.blog_optimization %}
+          <picture>
+               <source data-srcset="{{ photoDisplay.srcsetWidthWebP(1200) }}" 
+               data-sizes="100vw"
+               type="image/webp" />
+               <img data-src="{{ photoDisplay.placeholderImage(1200) }}"
+                    data-srcset="{{ photoDisplay.srcsetWidth(1200) }}"
+                    sizes="100vw" 
+                    class="lazyload rounded-lg shadow-lg mx-auto {% if node.imageZoom %}zoomable{% endif %}"
+               {% for width,height in photoDisplay.variantHeights %}
+                    width="{{width}}"  height="{{height}}"
+               {% endfor %}  
+               />
+          </picture>
+          {% endfor %}
+     {% endif %}
+     <span class="mx-auto text-xs mt-2 block text-center"> 
+          {{ node.content_title_plain }}
+     </span>
+</div>

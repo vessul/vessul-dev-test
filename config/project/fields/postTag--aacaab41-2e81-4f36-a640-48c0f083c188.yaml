@@ -1,0 +1,45 @@
+columnSuffix: nogyhumj
+contentColumnType: string
+fieldGroup: 0270af02-7c52-4ff3-8408-86fe6bdbe1f1 # Blog
+handle: postTag
+instructions: null
+name: 'Post Tag'
+searchable: false
+settings:
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - News
+        -
+          - value
+          - news
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Events
+        -
+          - value
+          - events
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Construction
+        -
+          - value
+          - construction
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

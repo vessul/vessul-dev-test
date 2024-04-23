@@ -1,0 +1,17 @@
+<section class="dynamic_bg">
+     <div class="container animation_titleContainer"> 
+          <div class="box_padding_lg">
+               <div class="mx-auto max-w-2xl text-center animation_titleElement">
+                    <h2 class="text-primary-dark type_3xl">
+                         {{ block.content_title_plain_break|nl2br }}
+                    </h2>
+                    <p class="mx-auto mt-6 max-w-xl type_lg text-secondary-dark">
+                         {{ block.content_body_plain }}
+                    </p>
+                    <div class="mt-10 flex items-center justify-center gap-x-6">
+                         {% include "_components/_shortcuts/neo_button_double.twig" %}
+                    </div>
+               </div>
+          </div>
+     </div>
+</section>
