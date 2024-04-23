@@ -15,6 +15,7 @@ See how other components are setup and clone a component to make the new one.
 
 Instructions: 
 - Clone this repo and rename it "vessul-dev-test-[your-name]"
+- Add the fonts required for this project (available free online, one is already there)
 - Add each component as a new commit
 - Page with new components called "components"
 - Run "Make export" to save your databse changes as a new backup
