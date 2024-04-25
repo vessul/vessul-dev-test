@@ -52,6 +52,8 @@ module.exports = {
         },
       },
       fontFamily: {
+          'inter':["Inter"],
+          'didot':["Didot"],
       },
       zIndex: {
         '1': '1',
