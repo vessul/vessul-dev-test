@@ -52,6 +52,7 @@ module.exports = {
         },
       },
       fontFamily: {
+          'inter':["Inter"],
       },
       zIndex: {
         '1': '1',
